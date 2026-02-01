@@ -8,4 +8,12 @@
     <string name="ok_message">Нажата кнопка OK</string>
     <string name="cancel_message">Нажата кнопка Cancel</string>
     <string name="delete_button">Delete Selected</string>
+    <string name="shared_text_received">Получен текст</string>
+    <string name="shared_image_received">Получено изображение</string>
+    <string name="shared_content_label">Содержимое:</string>
+    <string name="text_received">Текст получен</string>
+    <string name="image_received">Изображение получено</string>
+    <string name="no_text_received">Текст не получен</string>
+    <string name="no_data_received">Данные не получены</string>
+    <string name="shared_subject">Тема</string>
 </resources>
