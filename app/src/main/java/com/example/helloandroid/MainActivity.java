@@ -2,6 +2,7 @@ package com.example.helloandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity
     TextView mainTextView;
     EditText mainEditText;
     Button mainButton;
-    Button ok_btn, cnc_btn, delete_btn;
+    Button ok_btn, cnc_btn, delete_btn, guess_number_btn;
     ListView mainListView;
 
     ArrayAdapter<String> mArrayAdapter;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity
         ok_btn = findViewById(R.id.ok_btn);
         cnc_btn = findViewById(R.id.cnc_btn);
         delete_btn = findViewById(R.id.delete_btn);
+        guess_number_btn = findViewById(R.id.guess_number_btn);
 
         // Назначаем обработчики
         mainButton.setOnClickListener(this);
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity
         ok_btn.setOnClickListener(oclBtn);
         cnc_btn.setOnClickListener(oclBtn);
         delete_btn.setOnClickListener(this);
+        guess_number_btn.setOnClickListener(this);
 
         // Настраиваем ListView
         mArrayAdapter = new ArrayAdapter<>(
@@ -91,6 +94,13 @@ public class MainActivity extends AppCompatActivity
     // Нажатие на кнопку
     @Override
     public void onClick(View v) {
+        if (v.getId() == R.id.guess_number_btn) {
+            // Запуск игры "Угадай число"
+            Intent intent = new Intent(this, GuessNumberActivity.class);
+            startActivity(intent);
+            return;
+        }
+
         if (v.getId() == R.id.delete_btn) {
             // Удаление выделенного элемента
             if (selectedPosition >= 0 && selectedPosition < mNameList.size()) {

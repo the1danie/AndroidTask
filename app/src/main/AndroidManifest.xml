@@ -36,6 +36,11 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".GuessNumberActivity"
+            android:exported="true"
+            android:label="@string/guess_number_title"/>
     </application>
 
 </manifest>

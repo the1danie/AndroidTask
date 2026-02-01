@@ -85,4 +85,18 @@
             android:text="@string/delete_button"/>
     </LinearLayout>
 
+    <!-- Кнопка для запуска игры "Угадай число" -->
+    <Button
+        android:id="@+id/guess_number_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/guess_number_button"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"/>
+
 </LinearLayout>

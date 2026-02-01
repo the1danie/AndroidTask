@@ -16,4 +16,21 @@
     <string name="no_text_received">Текст не получен</string>
     <string name="no_data_received">Данные не получены</string>
     <string name="shared_subject">Тема</string>
+    <string name="try_to_guess">Попробуйте угадать число от 0 до 100</string>
+    <string name="input_value">Ввести</string>
+    <string name="input_hint">Введите число</string>
+    <string name="ahead">Загаданное число меньше!</string>
+    <string name="behind">Загаданное число больше!</string>
+    <string name="victory">Ура, победа! Загаданное число:</string>
+    <string name="victory_toast">Поздравляем! Вы угадали число!</string>
+    <string name="play_again">Играть снова</string>
+    <string name="exit_button">Выход</string>
+    <string name="empty_input_error">Пожалуйста, введите число</string>
+    <string name="empty_input_message">Введите число от 0 до 100</string>
+    <string name="invalid_number_error">Введите корректное число</string>
+    <string name="invalid_number_message">Пожалуйста, введите число</string>
+    <string name="range_error">Число должно быть от 0 до 100</string>
+    <string name="range_message">Введите число в диапазоне от 0 до 100</string>
+    <string name="guess_number_button">Угадай число</string>
+    <string name="guess_number_title">Угадай число</string>
 </resources>
