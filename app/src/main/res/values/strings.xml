@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="greetings">Hello from XML</string>
+    <string name="button">Update The TextView</string>
+    <string name="hint">Enter a name</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="ok_message">Нажата кнопка OK</string>
+    <string name="cancel_message">Нажата кнопка Cancel</string>
+    <string name="delete_button">Delete Selected</string>
+</resources>
