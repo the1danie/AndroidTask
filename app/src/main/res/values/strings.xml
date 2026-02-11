@@ -16,4 +16,8 @@
     <string name="no_text_received">Текст не получен</string>
     <string name="no_data_received">Данные не получены</string>
     <string name="shared_subject">Тема</string>
+    <string name="go_to_second">Перейти на второй экран</string>
+    <string name="received_label">Получено:</string>
+    <string name="reply_hint">Введите ответ</string>
+    <string name="send_back_button">Отправить назад</string>
 </resources>

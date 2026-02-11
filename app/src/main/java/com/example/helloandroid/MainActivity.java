@@ -1,7 +1,9 @@
 package com.example.helloandroid;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,8 +26,11 @@ public class MainActivity extends AppCompatActivity
     TextView mainTextView;
     EditText mainEditText;
     Button mainButton;
+    Button btnGoToSecond;
     Button ok_btn, cnc_btn, delete_btn;
     ListView mainListView;
+
+    private static final int REQUEST_SECOND_ACTIVITY = 1;
 
     ArrayAdapter<String> mArrayAdapter;
     ArrayList<String> mNameList = new ArrayList<>();
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity
         mainTextView = findViewById(R.id.main_textview);
         mainEditText = findViewById(R.id.main_edittext);
         mainButton = findViewById(R.id.main_button);
+        btnGoToSecond = findViewById(R.id.btnGoToSecond);
         mainListView = findViewById(R.id.main_listview);
         ok_btn = findViewById(R.id.ok_btn);
         cnc_btn = findViewById(R.id.cnc_btn);
@@ -47,6 +53,12 @@ public class MainActivity extends AppCompatActivity
 
         // Назначаем обработчики
         mainButton.setOnClickListener(this);
+        btnGoToSecond.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            String message = mainEditText.getText().toString();
+            intent.putExtra(SecondActivity.EXTRA_MESSAGE, message);
+            startActivityForResult(intent, REQUEST_SECOND_ACTIVITY);
+        });
         mainListView.setOnItemClickListener(this);
 
         // Создаем общий обработчик для кнопок OK и Cancel
@@ -145,5 +157,47 @@ public class MainActivity extends AppCompatActivity
         mainTextView.setText(
                 mNameList.get(position) + " is learning Android development!"
         );
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_SECOND_ACTIVITY && resultCode == RESULT_OK && data != null) {
+            String reply = data.getStringExtra(SecondActivity.REPLY_MESSAGE);
+            if (reply != null) {
+                mainTextView.setText("Ответ: " + reply);
+            }
+        }
+    }
+
+    // Жизненный цикл активити (ЛР2)
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("Lifecycle", "MainActivity: onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Lifecycle", "MainActivity: onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("Lifecycle", "MainActivity: onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("Lifecycle", "MainActivity: onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("Lifecycle", "MainActivity: onDestroy");
     }
 }

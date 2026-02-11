@@ -37,6 +37,15 @@
             android:text="@string/button"/>
     </LinearLayout>
 
+    <!-- Кнопка перехода на второй экран (ЛР2) -->
+    <Button
+        android:id="@+id/btnGoToSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/go_to_second"/>
+
     <!-- ListView -->
     <ListView
         android:id="@+id/main_listview"
