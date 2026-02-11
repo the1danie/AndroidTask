@@ -25,6 +25,13 @@
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
+            android:name=".ViewsDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrientationActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize" />
+        <activity
             android:name=".ShareActivity"
             android:exported="true"
             android:label="@string/app_name">

@@ -20,4 +20,11 @@
     <string name="received_label">Получено:</string>
     <string name="reply_hint">Введите ответ</string>
     <string name="send_back_button">Отправить назад</string>
+    <!-- ЛР4: представления элементов -->
+    <string name="lr4_button">ЛР4 Представления</string>
+    <string name="tvTopText">Верхний текст</string>
+    <string name="btnTopText">Верхняя кнопка</string>
+    <string name="tvBottomText">Нижний текст</string>
+    <string name="btnBottomText">Нижняя кнопка</string>
+    <string name="orientation_demo">Экран ориентации</string>
 </resources>

@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- ЛР4: ресурсы оформления -->
+    <color name="llTopColor">#336699</color>
+    <color name="llBottomColor">#339966</color>
 </resources>

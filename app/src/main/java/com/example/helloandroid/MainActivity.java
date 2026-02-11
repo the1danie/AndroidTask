@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         mainEditText = findViewById(R.id.main_edittext);
         mainButton = findViewById(R.id.main_button);
         btnGoToSecond = findViewById(R.id.btnGoToSecond);
+        Button btnLr4 = findViewById(R.id.btnLr4);
         mainListView = findViewById(R.id.main_listview);
         ok_btn = findViewById(R.id.ok_btn);
         cnc_btn = findViewById(R.id.cnc_btn);
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity
             intent.putExtra(SecondActivity.EXTRA_MESSAGE, message);
             startActivityForResult(intent, REQUEST_SECOND_ACTIVITY);
         });
+        btnLr4.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ViewsDemoActivity.class)));
         mainListView.setOnItemClickListener(this);
 
         // Создаем общий обработчик для кнопок OK и Cancel
